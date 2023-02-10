@@ -1,0 +1,41 @@
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    padding: 25px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+input[type=text],
+input[type=password] {
+    width: 25%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid rgb(116, 116, 116);
+    border-radius: 4px;
+}
+
+.text-danger {
+    color: rgb(236, 58, 58);
+    margin-bottom: 5px;
+}
+
+.text-warning {
+    color: rgb(246, 201, 54);
+}
+
+.btn {
+    margin: 10px 20px;
+    padding: 15px 50px;
+    background-color: rgb(34, 33, 33);
+    color: white;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    color: black;
+    background-color: rgb(190, 190, 190);
+    border: 1px solid black;
+}

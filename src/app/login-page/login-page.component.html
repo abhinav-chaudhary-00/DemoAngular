@@ -1,0 +1,33 @@
+<div class="container">
+    <form name="loginform" #loginForm="ngForm" (ngSubmit)="loginForm.form.valid && onsubmit()">
+        <div>
+            <h3>LOGIN</h3>
+        </div>
+        <div>
+            <input type="text" name="uname" id="uname" placeholder="Username" [(ngModel)]="logindetails.uname"
+                #username="ngModel" minlength="4" required>
+        </div>
+        <div *ngIf="loginForm.submitted && username.errors" class="text-danger">
+            <div *ngIf="username.errors['required']">Username is required</div>
+            <div *ngIf="username.errors['minlength']">
+                Username must be at least 4 characters
+            </div>
+        </div>
+        <div>
+            <input type="password" name="pswd" id="pswd" placeholder="Password" [(ngModel)]="logindetails.password"
+                #pswd="ngModel" minlength="8" required>
+        </div>
+        <div *ngIf="loginForm.submitted && pswd.errors" class="text-danger">
+            <div *ngIf="pswd.errors['required']">Password is required</div>
+            <div *ngIf="pswd.errors['minlength']">
+                Username must be at least 8 characters
+            </div>
+        </div>
+        <div class="text-center">
+            <input type="submit" value="Login" class="btn">
+        </div>
+        <div *ngIf="errlogin" class="text-warning">
+            {{ message }}
+        </div>
+    </form>
+</div>

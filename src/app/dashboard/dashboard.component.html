@@ -31,7 +31,8 @@
         <table class="table">
             <thead>
                 <tr>
-                    <th scope="col">Roll No</th>
+                    <th scope="col" (click)="sortData()">Roll No <i style="float: right; border-color: white;"
+                            [ngClass]="order ? 'arrow up': 'arrow down'"></i></th>
                     <th scope="col">Name</th>
                     <th scope="col">Age</th>
                     <th scope="col">Branch</th>

@@ -3,35 +3,35 @@
         "sname": "Abhinav",
         "age": 23,
         "branch": "Non-Medical",
-        "rollno": 11,
+        "rollno": 51,
         "marks": 98
     },
     {
-        "sname": "Abhinav",
+        "sname": "Raj",
+        "age": 23,
+        "branch": "Non-Medical",
+        "rollno": 31,
+        "marks": 98
+    },
+    {
+        "sname": "Mohan",
         "age": 23,
         "branch": "Non-Medical",
         "rollno": 11,
         "marks": 98
     },
     {
-        "sname": "Abhinav",
+        "sname": "Shyam",
         "age": 23,
         "branch": "Non-Medical",
-        "rollno": 11,
+        "rollno": 12,
         "marks": 98
     },
     {
-        "sname": "Abhinav",
+        "sname": "Majnu",
         "age": 23,
         "branch": "Non-Medical",
-        "rollno": 11,
-        "marks": 98
-    },
-    {
-        "sname": "Abhinav",
-        "age": 23,
-        "branch": "Non-Medical",
-        "rollno": 11,
+        "rollno": 21,
         "marks": 98
     }
 ]

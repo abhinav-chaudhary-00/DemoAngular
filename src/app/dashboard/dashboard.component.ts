@@ -23,6 +23,8 @@ export class DashboardComponent implements OnInit {
   private json_url: string = "assets/data.json";
   name!: String;
   students!: studentDetails[];
+  order: boolean = false;
+
 
 
   constructor(private activatedRoute: ActivatedRoute, private http: HttpClient) {
@@ -38,5 +40,17 @@ export class DashboardComponent implements OnInit {
   ngOnInit(): void {
     this.name = this.activatedRoute.snapshot.params["uname"];
   }
+
+  sortData() {
+    if (this.order) {
+      let newarr = this.students.sort((a, b) => a.rollno - b.rollno);
+      this.students = newarr;
+    } else {
+      let newarr = this.students.sort((a, b) => b.rollno - a.rollno);
+      this.students = newarr;
+    }
+    this.order = !this.order;
+  }
+
 
 }

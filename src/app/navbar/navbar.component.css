@@ -4,6 +4,11 @@
     padding: 0;
 }
 
+ul {
+    display: block;
+    margin: 0;
+}
+
 .navbar-login ul {
     list-style-type: none;
     overflow: hidden;

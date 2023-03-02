@@ -72,6 +72,10 @@
     border: 1px solid black;
 }
 
+.highlighted {
+    box-shadow: 0px 0px 10px;
+}
+
 .table {
     border-collapse: collapse;
 }
@@ -109,6 +113,16 @@
     padding: 3px;
 }
 
+.right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+}
+
+.left {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+}
+
 .up {
     transform: rotate(-135deg);
     -webkit-transform: rotate(-135deg);
@@ -117,4 +131,63 @@
 .down {
     transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
+}
+
+
+.search-box {
+    width: 50%;
+    float: left;
+    text-align: right;
+}
+
+.input-search {
+    margin: 16px 4px;
+    padding: 12px 16px;
+    width: 50%;
+    box-sizing: border-box;
+    border: 1px solid rgb(184, 184, 184);
+    border-radius: 5px;
+}
+
+.input-search:hover {
+    border-color: rgb(108, 108, 236);
+}
+
+.input-search:focus {
+    border: 2px solid blue;
+}
+
+.select-pagelimit {
+    margin: 16px 4px;
+    padding: 12px 16px;
+    width: 40%;
+    box-sizing: border-box;
+    border: 1px solid rgb(184, 184, 184);
+    border-radius: 5px;
+}
+
+.pagebtn {
+    display: inline-block;
+    margin: 12px 8px;
+    padding: 12px 16px;
+    box-sizing: border-box;
+    background-color: rgb(144, 188, 255);
+    border: none;
+    border-radius: 5px;
+}
+
+.controlbtn {
+    display: inline-block;
+    margin: 12px 8px;
+    padding: 12px 16px;
+    box-sizing: border-box;
+    background-color: rgb(64, 64, 64);
+    border-radius: 5px;
+    border: none;
+    color: white
+}
+
+.active {
+    background-color: rgb(189, 189, 189);
+    border: 1px solid;
 }

@@ -1,37 +1,184 @@
 [
     {
         "sname": "Abhinav",
-        "age": 23,
+        "age": 22,
         "branch": "Non-Medical",
-        "rollno": 51,
-        "marks": 98
+        "rollno": 1,
+        "marks": 90
     },
     {
         "sname": "Raj",
-        "age": 23,
-        "branch": "Non-Medical",
-        "rollno": 31,
+        "age": 25,
+        "branch": "Medical",
+        "rollno": 2,
         "marks": 98
     },
     {
         "sname": "Mohan",
-        "age": 23,
+        "age": 26,
         "branch": "Non-Medical",
-        "rollno": 11,
-        "marks": 98
+        "rollno": 3,
+        "marks": 77
     },
     {
         "sname": "Shyam",
-        "age": 23,
+        "age": 21,
+        "branch": "Commerce",
+        "rollno": 4,
+        "marks": 98
+    },
+    {
+        "sname": "Harry",
+        "age": 35,
+        "branch": "Medical",
+        "rollno": 5,
+        "marks": 88
+    },
+    {
+        "sname": "Hermoine",
+        "age": 22,
         "branch": "Non-Medical",
+        "rollno": 6,
+        "marks": 98
+    },
+    {
+        "sname": "Dumbledore",
+        "age": 40,
+        "branch": "Humanities",
+        "rollno": 7,
+        "marks": 77
+    },
+    {
+        "sname": "Snape",
+        "age": 35,
+        "branch": "Commerce",
+        "rollno": 8,
+        "marks": 98
+    },
+    {
+        "sname": "Peter",
+        "age": 25,
+        "branch": "Non-Medical",
+        "rollno": 9,
+        "marks": 88
+    },
+    {
+        "sname": "Marry Jane",
+        "age": 25,
+        "branch": "Medical",
+        "rollno": 10,
+        "marks": 98
+    },
+    {
+        "sname": "May",
+        "age": 30,
+        "branch": "Non-Medical",
+        "rollno": 11,
+        "marks": 77
+    },
+    {
+        "sname": "Ben Tennison",
+        "age": 14,
+        "branch": "Humanities",
         "rollno": 12,
         "marks": 98
     },
     {
-        "sname": "Majnu",
-        "age": 23,
+        "sname": "Max",
+        "age": 45,
+        "branch": "Plumber",
+        "rollno": 13,
+        "marks": 88
+    },
+    {
+        "sname": "Gwen",
+        "age": 15,
         "branch": "Non-Medical",
-        "rollno": 21,
+        "rollno": 14,
         "marks": 98
+    },
+    {
+        "sname": "Atomic",
+        "age": 22,
+        "branch": "Medical",
+        "rollno": 15,
+        "marks": 77
+    },
+    {
+        "sname": "Saitama",
+        "age": 29,
+        "branch": "Non-Medical",
+        "rollno": 16,
+        "marks": 98
+    },
+    {
+        "sname": "King",
+        "age": 33,
+        "branch": "Non-Medical",
+        "rollno": 17,
+        "marks": 91
+    },
+    {
+        "sname": "Todoroki",
+        "age": 21,
+        "branch": "Non-Medical",
+        "rollno": 18,
+        "marks": 99
+    },
+    {
+        "sname": "Izuku Midoriya",
+        "age": 20,
+        "branch": "Non-Medical",
+        "rollno": 19,
+        "marks": 94
+    },
+    {
+        "sname": "Kachhan",
+        "age": 20,
+        "branch": "Non-Medical",
+        "rollno": 20,
+        "marks": 98
+    },
+    {
+        "sname": "Monkey D Luffy",
+        "age": 21,
+        "branch": "Pirate-king",
+        "rollno": 21,
+        "marks": 75
+    },
+    {
+        "sname": "Ace D Portugal",
+        "age": 29,
+        "branch": "Non-Medical",
+        "rollno": 22,
+        "marks": 97
+    },
+    {
+        "sname": "Dragon",
+        "age": 38,
+        "branch": "Non-Medical",
+        "rollno": 23,
+        "marks": 80
+    },
+    {
+        "sname": "Nami Swan",
+        "age": 22,
+        "branch": "Medical",
+        "rollno": 24,
+        "marks": 100
+    },
+    {
+        "sname": "Zoro",
+        "age": 24,
+        "branch": "Swordsman",
+        "rollno": 25,
+        "marks": 81
+    },
+    {
+        "sname": "Tony Tony Chopper",
+        "age": 23,
+        "branch": "Medical",
+        "rollno": 26,
+        "marks": 99
     }
 ]

@@ -9,6 +9,10 @@ import { RegisterPageComponent } from './register-page/register-page.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { HttpClientModule } from '@angular/common/http';
+import { MatDashboardComponent } from './mat-dashboard/mat-dashboard.component';
+import { MatLoginComponent } from './mat-dashboard/mat-login/mat-login.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialModule } from './material/material.module';
 
 @NgModule({
   declarations: [
@@ -16,14 +20,18 @@ import { HttpClientModule } from '@angular/common/http';
     LoginPageComponent,
     RegisterPageComponent,
     NavbarComponent,
-    DashboardComponent
+    DashboardComponent,
+    MatDashboardComponent,
+    MatLoginComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]

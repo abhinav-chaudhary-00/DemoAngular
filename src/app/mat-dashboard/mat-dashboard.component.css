@@ -1,0 +1,127 @@
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    padding: 25px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.heading {
+    text-align: center;
+    background-color: #ff4081;
+    color: white;
+    border-radius: 5px;
+    margin: auto;
+    padding: 15px 50px;
+}
+
+.d-flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card {
+    margin: 10px 5px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: lightgray;
+    background-clip: border-box;
+    border: 1px solid rgb(161, 161, 161);
+    border-radius: 5px;
+}
+
+.col-75 {
+    flex: 0 0 auto;
+    width: 75%;
+}
+
+.col-80 {
+    flex: 0 0 auto;
+    width: 80%;
+}
+
+.col-50 {
+    flex: 0 0 auto;
+    width: 50%;
+}
+
+.col-25 {
+    flex: 0 0 auto;
+    width: 25%;
+}
+
+.col-20 {
+    flex: 0 0 auto;
+    width: 20%;
+}
+
+.row {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin: inherit;
+}
+
+.text-danger {
+    color: rgb(236, 58, 58);
+    margin-bottom: 5px;
+}
+
+.text-warning {
+    color: rgb(246, 201, 54);
+}
+
+.profile-card {
+    margin: 2rem 0.5rem;
+    box-shadow: 0 0 5px #a2a2a2;
+}
+
+.useful-card {
+    margin: 2rem 0.5rem;
+    box-shadow: 0 0 5px #a2a2a2;
+}
+
+.data-table {
+    /* border-collapse: collapse; */
+    border-collapse: separate;
+    /* border:solid black 1px; */
+    border-radius: 6px;
+    width: 100%;
+    /* border-color: rgb(161, 161, 161); */
+    box-shadow: 0 0 5px #a2a2a2;
+
+}
+
+.data-table td,
+.data-table th {
+    text-align: left;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+.data-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.data-table tr:hover {
+    background-color: #ddd;
+}
+
+.data-table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #2d2d2d;
+    color: white;
+}
+
+.filter-input {
+    width: 90vw;
+    font-size: 1rem;
+}

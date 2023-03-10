@@ -2,15 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-
-interface studentDetails {
-  sname: string;
-  rollno: number;
-  branch: string;
-  marks: number;
-  age: number;
-}
-
+import { studentDetails } from '../model/student.model';
 
 @Component({
   selector: 'app-dashboard',
@@ -37,7 +29,7 @@ export class DashboardComponent implements OnInit {
   constructor(private activatedRoute: ActivatedRoute, private http: HttpClient) { }
 
   public getJSON(): Observable<any> {
-    return this.http.get(this.json_url);
+    return this.http.get<studentDetails[]>(this.json_url);
   }
 
   ngOnInit(): void {
@@ -129,10 +121,9 @@ export class DashboardComponent implements OnInit {
   }
 
   nextPage() {
-    if (this.selectedIndex < this.students.length) {
+    if (this.selectedIndex < this.pageDivision - 1) {
       this.selectedIndex++;
       this.changePage(this.selectedIndex)
-
     }
   }
 

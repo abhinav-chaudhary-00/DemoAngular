@@ -72,10 +72,12 @@
         </table>
         <div class="row">
             <div class="col" style="text-align: right; width: 100%;">
-                <button class="controlbtn" (click)="previousPage()"><span class="arrow left"></span> Previous </button>
+                <button class="controlbtn" (click)="previousPage()"><span class="arrow left"
+                        style="border-color: white"></span> Previous </button>
                 <button class="pagebtn" *ngFor="let x of entries; let i= index;"
                     [ngClass]="{'active': i==selectedIndex}" (click)="changePage(x)">{{x+1}}</button>
-                <button class="controlbtn" (click)="nextPage()"> Next <span class="arrow right"></span></button>
+                <button class="controlbtn" (click)="nextPage()"> Next <span class="arrow right"
+                        style="border-color: white"></span></button>
 
             </div>
         </div>

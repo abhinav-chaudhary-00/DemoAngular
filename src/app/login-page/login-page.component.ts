@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 
 interface LoginDet {
@@ -14,6 +15,7 @@ interface LoginDet {
 export class LoginPageComponent implements OnInit {
 
   logindetails!: LoginDet;
+  @ViewChild('loginForm') loginform!: NgForm;
   message!: String;
   errlogin: boolean = false;
   loginstatus: boolean = false;
@@ -21,7 +23,6 @@ export class LoginPageComponent implements OnInit {
   constructor(private router: Router) { }
 
   ngOnInit(): void {
-    console.log("entered loginpage")
     this.logindetails = {
       uname: "",
       password: ""
@@ -29,7 +30,6 @@ export class LoginPageComponent implements OnInit {
   }
 
   onsubmit() {
-    console.log(this.logindetails);
     if (this.logindetails.uname == "admin" && this.logindetails.password == "12345678") {
       this.router.navigate(['/dashboard', this.logindetails.uname]);
       this.loginstatus = true;
@@ -37,7 +37,6 @@ export class LoginPageComponent implements OnInit {
       this.router.navigate(['/dashboard', this.logindetails.uname]);
       this.loginstatus = true;
     }
-
     else {
       this.errlogin = true;
       this.loginstatus = false;

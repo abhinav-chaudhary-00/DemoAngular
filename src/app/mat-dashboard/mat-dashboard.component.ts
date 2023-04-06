@@ -1,11 +1,10 @@
-import { DataSource } from '@angular/cdk/collections';
 import { HttpClient } from '@angular/common/http';
 import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort, Sort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
-import { ActivatedRoute, Router } from '@angular/router';
-import { Observable } from 'rxjs';
+import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
+import { Observable, filter, map, take } from 'rxjs';
 import { studentDetails } from '../model/student.model';
 
 @Component({
@@ -15,30 +14,47 @@ import { studentDetails } from '../model/student.model';
 })
 export class MatDashboardComponent implements OnInit, AfterViewInit {
 
-  private json_url: string = "assets/data.json";
+  private readonly json_url: string = "assets/data.json";
   name: string = '';
   filterString: string = '';
-  datasource: any;
+  studentLength: number = 0;
+  datasource: any = null;
   displayedColumns: string[] = ['rollno', 'sname', 'age', 'marks', 'branch'];
   students: studentDetails[] = [];
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
-  private _liveAnnouncer: any;
 
-  constructor(private http: HttpClient, private activatedRoute: ActivatedRoute) {
-    // console.log(this.router.getCurrentNavigation().extras.state['sname']);
+  constructor(
+    private http: HttpClient,
+    private router: Router
+  ) {
+    const { sname } = this.router.getCurrentNavigation()?.extras.state ?? {};
+    this.name = typeof sname === 'string' ? sname.toUpperCase() : 'USER';
   }
 
   ngOnInit(): void {
-    this.getJson().subscribe((data) => {
-      this.students = data;
+
+    this.getJson().subscribe((students) => {
+      this.students = students;
+      this.studentLength = this.students.length;
       this.datasource = new MatTableDataSource<studentDetails>(this.students);
       this.datasource.paginator = this.paginator;
       this.datasource.sort = this.sort;
 
+      // this.sort.sortChange.pipe(
+      //   map(({active, direction}) => ({active, direction: direction || 'desc'}))
+      // ).subscribe((sortState) => {
+      //   this.datasource!.sort.sort(sortState);
+      // })
+
+      const sortState: Sort = { active: 'sname', direction: 'desc' };
+      this.sort.active = sortState.active;
+      this.sort.direction = sortState.direction;
+      this.sort.sortChange.emit(sortState);
+
+      // console.log(this.sort.sortables)
     });
-    this.name = this.activatedRoute.snapshot.params['username'];
   }
 
   ngAfterViewInit() {
@@ -46,10 +62,6 @@ export class MatDashboardComponent implements OnInit, AfterViewInit {
 
   getJson(): Observable<studentDetails[]> {
     return this.http.get<studentDetails[]>(this.json_url);
-  }
-
-  capitalize(name: string) {
-    return this.name.toLocaleUpperCase();
   }
 
   // announceSortChange(sortState: Sort) {
@@ -62,6 +74,10 @@ export class MatDashboardComponent implements OnInit, AfterViewInit {
 
   applyFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;
-    this.datasource.filter = filterValue.trim().toLowerCase();
+    this.filterString = filterValue;
+
+    if (this.datasource) {
+      this.datasource.filter = filterValue.trim().toLowerCase();
+    }
   }
 }

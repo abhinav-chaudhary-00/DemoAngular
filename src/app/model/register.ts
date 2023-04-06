@@ -1,12 +1,7 @@
 export class UserDet {
-    firstName: String = "";
-    lastName: String = "";
-    username: String = "";
-    password: String = "";
-    email: String = "";
+    constructor(public firstName: string, public lastName: string, public username: string, public password: string, public email: string) { }
 }
 
 export class LoginDet {
-    uname: String = "";
-    password: String = "";
+    constructor(public uname: string, public password: string) { }
 }

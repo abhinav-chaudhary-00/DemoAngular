@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
@@ -16,8 +15,7 @@ export class AuthService {
     //     console.log(data)
     //   })
     let res: boolean;
-    console.log("helloagain")
-    console.log(usern + " " + userp);
+
     if (usern == 'abhinav' && userp == '12345678') {
       res = true;
     } else if (usern == 'admin' && userp == '12345678') {
@@ -25,9 +23,6 @@ export class AuthService {
     } else {
       res = false;
     }
-
-
-    console.log("i worked fine " + res)
     return res;
 
   }

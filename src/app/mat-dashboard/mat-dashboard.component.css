@@ -1,4 +1,6 @@
-.container {
+@import "@angular/material/prebuilt-themes/indigo-pink.css";
+
+w .container {
     margin-left: auto;
     margin-right: auto;
     width: 100%;

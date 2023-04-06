@@ -104,12 +104,7 @@ export class DashboardComponent implements OnInit {
   }
 
   changePage(n: number) {
-    if (this.pageDivision * n <= this.studentsOriginal.length) {
-      this.start = this.pageLimit * n;
-    } else {
-      this.start = (this.pageLimit * n);
-      console.log(this.start)
-    }
+    this.start = this.pageLimit * n;
     this.selectedIndex = n;
   }
 

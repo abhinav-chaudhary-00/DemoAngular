@@ -1,5 +1,5 @@
 <div class="container">
-    <form name="loginform" #loginForm="ngForm" (ngSubmit)="loginForm.form.valid && onsubmit()">
+    <form name="loginform" id="loginform" #loginForm="ngForm" (ngSubmit)="loginForm.form.valid && onsubmit()">
         <div>
             <h3>LOGIN</h3>
         </div>
@@ -9,7 +9,7 @@
         </div>
         <div *ngIf="loginForm.submitted && username.errors" class="text-danger">
             <div *ngIf="username.errors['required']">Username is required</div>
-            <div *ngIf="username.errors['minlength']">
+            <div *ngIf="username.errors['minlength']">;
                 Username must be at least 4 characters
             </div>
         </div>

@@ -7,31 +7,34 @@
 
         <mat-divider></mat-divider>
 
-        <form (ngSubmit)="loginUser($event)">
+        <form (ngSubmit)="loginUser($event)" [formGroup]="loginForm" id="loginform">
             <mat-card-content class="login-content">
                 <mat-form-field class="input-full">
                     <mat-label>Enter your username</mat-label>
-                    <input matInput type="text" name="usern" id="usern" #usern [formControl]="userFormControl">
-                    <mat-error *ngIf="userFormControl.hasError('required')">
+                    <input matInput type="text" name="usern" id="usern" #usern formControlName="userFormControl"
+                        [errorStateMatcher]="matcher">
+                    <mat-error *ngIf="frmlogin['userFormControl'].hasError('required')">
                         Username is required.
                     </mat-error>
                 </mat-form-field>
 
-                <mat-form-field appearence="fill" class="input-full">
+                <mat-form-field class="input-full">
                     <mat-label>Enter your password</mat-label>
                     <input matInput [type]="hide ? 'password' : 'text'" name="userp" id="userp" #userp
-                        [formControl]="passFormControl">
+                        formControlName="passFormControl" [errorStateMatcher]="matcher">
                     <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
                         [attr.aria-pressed]="hide">
                         <mat-icon> {{ hide ? 'visibility_off' : 'visibility' }}</mat-icon>
                     </button>
-                    <mat-error *ngIf="passFormControl.hasError && !passFormControl.hasError('required')">
-                        Length Should be in range 4 to 16 Characters.
+                    <mat-error
+                        *ngIf="frmlogin['passFormControl'].hasError && frmlogin['passFormControl'].hasError('required')">
+                        Password Length Should be in range 4 to 16 Characters.
                     </mat-error>
                 </mat-form-field>
             </mat-card-content>
             <mat-card-actions class="login-actions">
-                <button mat-raised-button color="accent" class="login-btn" mat-subheading-2 type="submit">Login</button>
+                <button mat-raised-button color="accent" class="login-btn" mat-subheading-2 type="submit"
+                    [disabled]="!loginForm.valid" id="submitBtn">Login</button>
             </mat-card-actions>
         </form>
     </mat-card>

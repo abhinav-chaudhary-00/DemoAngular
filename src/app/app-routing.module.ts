@@ -9,7 +9,7 @@ const routes: Routes = [
   { path: "", redirectTo: "/login", pathMatch: 'full' },
   { path: "login", component: LoginPageComponent },
   { path: "matlogin", component: MatLoginComponent },
-  { path: "matdash/:username", component: MatDashboardComponent },
+  { path: "matdash", component: MatDashboardComponent },
   { path: "dashboard/:uname", component: DashboardComponent }
 ];
 
